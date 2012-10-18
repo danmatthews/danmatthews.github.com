@@ -5,9 +5,9 @@ title: About Me
 
 <div id="bio">
 
-  <p>I'm a web developer coding in mainly <span class="lang">PHP</span>, but dabbling in languages and technologies like <span class="lang">Ruby</span>, <span class="lang">LESS</span>, <span class="lang">Unix</span>, <span class="lang">Puppet</span>, Vagrant and others.</p>
+  <p>I'm a web developer coding in mainly <a class="lang" href="http://php.net">PHP</a>, but dabbling in languages, technologies and frameworks like <a class="lang" href="http://www.ruby-lang.org/en/">Ruby</a>, <a class="lang" href="http://lesscss.org">LESS</a>, <a class="lang" href="http://puppetlabs.com/">Puppet</a>, <a class="lang" href="http://vagrantup.com/">Vagrant</a>, <a class="lang" href="http://fuelphp.com">FuelPHP</a> and others.</p>
 
-  <p>Currently, i'm a developer at <a href="http://hydrant.co.uk">Hydrant</a>, while also being the lead developer on <a href="http://simplysatisfied.net/">Simply Satisfied</a>.</p>
+  <p>Currently, i'm a developer at <a href="http://hydrant.co.uk">Hydrant</a>, while also being the sole developer on <a href="http://simplysatisfied.net/">Simply Satisfied</a>. Checkout my projects on <a href="http://github.com/danmatthews">Github</a></p>
 
 </div>
 
@@ -15,7 +15,21 @@ title: About Me
   <h3>Blog Entries</h3>
   <ul>
   {% for post in site.posts %}
-    <li><span class="date">{{ post.date | date_to_string }}</span> &rarr; <a href="{{post.url}}">{{ post.title }}</a></li>
+    <li><a href="{{post.url}}">{{ post.title }}</a> <span class="date">{{ post.date | date_to_string }}</span></li>
   {% endfor %}
   </ul>
+</div>
+
+<div id="projects">
+	<h3>Projects</h3>
+	<ul>
+		<li class="first">
+			<h5><a href="http://simplysatisfied.net">Simply Satisfied</a></h5>
+			<p>Simply Satisfied is a quick way to collect customer feedback, build a survey, send email invites, and view your performance over time.</p>
+		</li>
+		<li>
+			<h5><a href="http://github.com/danmatthews/req">Req</a></h5>
+			<p>Req is a two-part tool for developers - a command line utility that lets you template HTTP requests using JSON documents, and a PHP class you can use in your applications to make using cURL requests easier.</p>
+		</li>
+	</ul>
 </div>

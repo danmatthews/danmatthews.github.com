@@ -55,12 +55,14 @@
 
 <p>Example:</p>
 
-<pre><code>@brandColor:#bada55; /* Declare your brand colour */</code></pre>
+<p><div class='highlight'><pre><code class='css'><span class='k'>@brandColor</span><span class='o'>:</span><span class='nf'>#bada55</span><span class='p'>;</span> <span class='c'>/* Declare your brand colour */</span>
+</code></pre>
+</div></p>
 
 <p>Then later on in your stylesheet:</p>
-
-<pre><code>background-color:@brandColor;</code></pre>
-
+<div class='highlight'><pre><code class='css'><span class='nt'>background-color</span><span class='o'>:</span><span class='k'>@brandColor</span><span class='p'>;</span>
+</code></pre>
+</div>
 <p>As simple as that!</p>
 
 <h3 id='mixins'>Mixins</h3>
@@ -71,49 +73,51 @@
 
 <p>In your .less file, you would write:</p>
 
-<pre><code>.border-radius-all(@radiusSize) {
-    -webkit-border-radius:@radiusSize;
-    -moz-border-radius:@radiusSize;
-    border-radius:@radiusSize;
-}</code></pre>
+<p><div class='highlight'><pre><code class='css'><span class='nc'>.border-radius-all</span><span class='o'>(</span><span class='k'>@radiusSize</span><span class='o'>)</span> <span class='p'>{</span>
+    <span class='nt'>-webkit-border-radius</span><span class='o'>:</span><span class='k'>@radiusSize</span><span class='p'>;</span>
+    <span class='nt'>-moz-border-radius</span><span class='o'>:</span><span class='k'>@radiusSize</span><span class='p'>;</span>
+    <span class='nt'>border-radius</span><span class='o'>:</span><span class='k'>@radiusSize</span><span class='p'>;</span>
+<span class='p'>}</span>
+</code></pre>
+</div></p>
 
 <p>Then after that’s been declared, you could use it in a rule like so:</p>
-
-<pre><code>#container {
-    padding: 20px;
-    border:1px solid black;
-    .border-radius-all(4px);
-}</code></pre>
-
+<div class='highlight'><pre><code class='css'><span class='nf'>#container</span> <span class='p'>{</span>
+    <span class='k'>padding</span><span class='o'>:</span> <span class='m'>20px</span><span class='p'>;</span>
+    <span class='k'>border</span><span class='o'>:</span><span class='m'>1px</span> <span class='k'>solid</span> <span class='nb'>black</span><span class='p'>;</span>
+    <span class='o'>.</span><span class='k'>border</span><span class='o'>-</span><span class='n'>radius</span><span class='o'>-</span><span class='n'>all</span><span class='p'>(</span><span class='m'>4px</span><span class='p'>);</span>
+<span class='p'>}</span>
+</code></pre>
+</div>
 <p>This would then compile to:</p>
-
-<pre><code>#container {
-    padding: 20px;
-    border:1px solid black;
-    -webkit-border-radius:4px;
-    -moz-border-radius:4px;
-    border-radius:4px;
-}</code></pre>
-
+<div class='highlight'><pre><code class='css'><span class='nf'>#container</span> <span class='p'>{</span>
+    <span class='k'>padding</span><span class='o'>:</span> <span class='m'>20px</span><span class='p'>;</span>
+    <span class='k'>border</span><span class='o'>:</span><span class='m'>1px</span> <span class='k'>solid</span> <span class='nb'>black</span><span class='p'>;</span>
+    <span class='o'>-</span><span class='n'>webkit</span><span class='o'>-</span><span class='k'>border</span><span class='o'>-</span><span class='n'>radius</span><span class='o'>:</span><span class='m'>4px</span><span class='p'>;</span>
+    <span class='o'>-</span><span class='n'>moz</span><span class='o'>-</span><span class='k'>border</span><span class='o'>-</span><span class='n'>radius</span><span class='o'>:</span><span class='m'>4px</span><span class='p'>;</span>
+    <span class='k'>border</span><span class='o'>-</span><span class='n'>radius</span><span class='o'>:</span><span class='m'>4px</span><span class='p'>;</span>
+<span class='p'>}</span>
+</code></pre>
+</div>
 <p>And you can re-use this everywhere! Awesome, no?</p>
 
 <h3 id='inheritance'>Inheritance</h3>
 
 <p>So in a normal cascading stylesheet, in order to constrain a class within the context of another div, you’d write it like this:</p>
-
-<pre><code>#somediv { width:400px; }
-#somediv .inner { width:380px;border:1px solid black; }</code></pre>
-
+<div class='highlight'><pre><code class='css'><span class='nf'>#somediv</span> <span class='p'>{</span> <span class='k'>width</span><span class='o'>:</span><span class='m'>400px</span><span class='p'>;</span> <span class='p'>}</span>
+<span class='nf'>#somediv</span> <span class='nc'>.inner</span> <span class='p'>{</span> <span class='k'>width</span><span class='o'>:</span><span class='m'>380px</span><span class='p'>;</span><span class='k'>border</span><span class='o'>:</span><span class='m'>1px</span> <span class='k'>solid</span> <span class='nb'>black</span><span class='p'>;</span> <span class='p'>}</span>
+</code></pre>
+</div>
 <p>But in LESS, you can write it more naturally, almost emulating the structure of the HTML in your styles:</p>
-
-<pre><code>#somediv {
-    width:400px;
-    .inner {
-        width:380px;
-        border:1px solid black;
-    }
-}</code></pre>
-
+<div class='highlight'><pre><code class='css'><span class='nf'>#somediv</span> <span class='p'>{</span>
+    <span class='k'>width</span><span class='o'>:</span><span class='m'>400px</span><span class='p'>;</span>
+    <span class='o'>.</span><span class='n'>inner</span> <span class='err'>{</span>
+        <span class='k'>width</span><span class='o'>:</span><span class='m'>380px</span><span class='p'>;</span>
+        <span class='k'>border</span><span class='o'>:</span><span class='m'>1px</span> <span class='k'>solid</span> <span class='nb'>black</span><span class='p'>;</span>
+    <span class='p'>}</span>
+<span class='err'>}</span>
+</code></pre>
+</div>
 <p>Nice, no? It might seem like a silly little difference, but take it from me, when you’re writing huge stylesheets with lots of sub-elements, this becomes an elegant (and very natural) way to write declarations.</p>
 
 <h3 id='finally__inline_functions'>Finally - inline functions.</h3>
@@ -122,16 +126,20 @@
 
 <p>You can do mathematical things like:</p>
 
-<pre><code>@basePadding: 10px;
-@doublePadding: @basePadding * 2;</code></pre>
+<p><div class='highlight'><pre><code class='css'><span class='k'>@basePadding</span><span class='o'>:</span> <span class='nt'>10px</span><span class='p'>;</span>
+<span class='k'>@doublePadding</span><span class='o'>:</span> <span class='k'>@basePadding</span> <span class='o'>*</span> <span class='nt'>2</span><span class='p'>;</span>
+</code></pre>
+</div></p>
 
 <p>And yes, it will take care of the ‘px’ for you.</p>
 
 <p>And you can also mutate and alter colors like this:</p>
 
-<pre><code>@baseColor: #bada55;
-@hoverColor: lighten(@baseColor, 20%);
-@darkerColor: darken(@baseColor, 30%);</code></pre>
+<p><div class='highlight'><pre><code class='css'><span class='k'>@baseColor</span><span class='o'>:</span> <span class='nf'>#bada55</span><span class='p'>;</span>
+<span class='k'>@hoverColor</span><span class='o'>:</span> <span class='nt'>lighten</span><span class='o'>(</span><span class='k'>@baseColor</span><span class='o'>,</span> <span class='nt'>20</span><span class='o'>%)</span><span class='p'>;</span>
+<span class='k'>@darkerColor</span><span class='o'>:</span> <span class='nt'>darken</span><span class='o'>(</span><span class='k'>@baseColor</span><span class='o'>,</span> <span class='nt'>30</span><span class='o'>%)</span><span class='p'>;</span>
+</code></pre>
+</div></p>
 
 <p>Things like this make such a difference for things like quick HTML prototypes or desigining in the browser.</p>
 
@@ -151,11 +159,15 @@
 
 <p>Although unless you’re dealing with million line CSS files this really isn’t a big deal…</p>
 
-<h3 id='id1'><s>The PHP Compiler is a bit buggy.</s></h3>
+<h3 id='id20'><s>The PHP Compiler is a bit buggy.</s></h3>
 <s>I’ve been watching the development of the PHP compiler on [Github][8] since the early days, and it’s gotten so much better, but there are still kinks to be worked out.</s>
 <h3 id='er_thats_about_itfrom_my_point_of_view_anyway'>Er, that’s about it…from my point of view, anyway.</h3>
 
 <p>I can’t say much in the way of bad things about LESS, but it’s still not for everyone. Give it a go, and see what you think.</p>
+          <div id="footer">
+            Dan Matthews, 2012. Built with <a href="http://jekyllrb.com/">Jekyll</a>.
+          </div>
       </div>
+
     </body>
 </html>

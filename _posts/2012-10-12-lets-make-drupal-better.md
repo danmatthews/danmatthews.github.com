@@ -75,25 +75,25 @@ PHP is (as of writing) at version 5.4 - bringing even more OOP goodness built on
 
 So why is drupal built and used so readily on legacy procedural code? I know there's a lot of OOP goodness in the backend, and that will improve with time, but why can't we use REAL OOP to do things like:
 
-{% highlight php linenos startinline %}
+{% highlight php startinline %}
  $node = Node::load()->where('type', 'basic_page')->get(); 
 {% endhighlight %}
 Or:
 
-{% highlight php linenos startinline %}
+{% highlight php startinline %}
  $node = Node::load(31);
 {% endhighlight %}
 
 Or to create a new save-ready node, just do this:
 
-{% highlight php linenos startinline %}
+{% highlight php startinline %}
 
 $node = Node::create(array('type' => 'blog_post', 'title' => "Drupal is great"));
 {% endhighlight %}
 
 Where the result is a fully loaded `instanceof Node`, allowing you to do lovely things like:
 
-{% highlight php linenos startinline %}
+{% highlight php startinline %}
 
 $node->title = "New Title";
 $node->save(); // Saves
@@ -102,7 +102,7 @@ $node->delete(); // Deletes
 
 Seriously, how nice would that be? The same could apply to Taxonomy objects:
 
-{% highlight php linenos startinline %}
+{% highlight php startinline %}
 
 $term = TaxonomyTerm::load(121, 31); // ( $term-id, $vocab-id );
 $vocab = TaxonomyVocabulary::load(31);
@@ -110,7 +110,7 @@ $vocab = TaxonomyVocabulary::load(31);
 
 And some lovely exceptions to handle the errors:
 
-{% highlight php linenos startinline %}
+{% highlight php startinline %}
 
 // Examples
 try {

@@ -104,39 +104,39 @@
 <p>PHP is (as of writing) at version 5.4 - bringing even more OOP goodness built on top of the fantastic features added in php5.3.</p>
 
 <p>So why is drupal built and used so readily on legacy procedural code? I know there&#8217;s a lot of OOP goodness in the backend, and that will improve with time, but why can&#8217;t we use REAL OOP to do things like:</p>
-<div class='highlight'><pre><code class='php'><span class='lineno'>1</span>  <span class='nv'>$node</span> <span class='o'>=</span> <span class='nx'>Node</span><span class='o'>::</span><span class='na'>load</span><span class='p'>()</span><span class='o'>-&gt;</span><span class='na'>where</span><span class='p'>(</span><span class='s1'>&#39;type&#39;</span><span class='p'>,</span> <span class='s1'>&#39;basic_page&#39;</span><span class='p'>)</span><span class='o'>-&gt;</span><span class='na'>get</span><span class='p'>();</span> 
+<div class='highlight'><pre><code class='php'> <span class='nv'>$node</span> <span class='o'>=</span> <span class='nx'>Node</span><span class='o'>::</span><span class='na'>load</span><span class='p'>()</span><span class='o'>-&gt;</span><span class='na'>where</span><span class='p'>(</span><span class='s1'>&#39;type&#39;</span><span class='p'>,</span> <span class='s1'>&#39;basic_page&#39;</span><span class='p'>)</span><span class='o'>-&gt;</span><span class='na'>get</span><span class='p'>();</span> 
 </code></pre>
 </div>
 <p>Or:</p>
-<div class='highlight'><pre><code class='php'><span class='lineno'>1</span>  <span class='nv'>$node</span> <span class='o'>=</span> <span class='nx'>Node</span><span class='o'>::</span><span class='na'>load</span><span class='p'>(</span><span class='mi'>31</span><span class='p'>);</span>
+<div class='highlight'><pre><code class='php'> <span class='nv'>$node</span> <span class='o'>=</span> <span class='nx'>Node</span><span class='o'>::</span><span class='na'>load</span><span class='p'>(</span><span class='mi'>31</span><span class='p'>);</span>
 </code></pre>
 </div>
 <p>Or to create a new save-ready node, just do this:</p>
-<div class='highlight'><pre><code class='php'><span class='lineno'>1</span> <span class='nv'>$node</span> <span class='o'>=</span> <span class='nx'>Node</span><span class='o'>::</span><span class='na'>create</span><span class='p'>(</span><span class='k'>array</span><span class='p'>(</span><span class='s1'>&#39;type&#39;</span> <span class='o'>=&gt;</span> <span class='s1'>&#39;blog_post&#39;</span><span class='p'>,</span> <span class='s1'>&#39;title&#39;</span> <span class='o'>=&gt;</span> <span class='s2'>&quot;Drupal is great&quot;</span><span class='p'>));</span>
+<div class='highlight'><pre><code class='php'><span class='nv'>$node</span> <span class='o'>=</span> <span class='nx'>Node</span><span class='o'>::</span><span class='na'>create</span><span class='p'>(</span><span class='k'>array</span><span class='p'>(</span><span class='s1'>&#39;type&#39;</span> <span class='o'>=&gt;</span> <span class='s1'>&#39;blog_post&#39;</span><span class='p'>,</span> <span class='s1'>&#39;title&#39;</span> <span class='o'>=&gt;</span> <span class='s2'>&quot;Drupal is great&quot;</span><span class='p'>));</span>
 </code></pre>
 </div>
 <p>Where the result is a fully loaded <code>instanceof Node</code>, allowing you to do lovely things like:</p>
-<div class='highlight'><pre><code class='php'><span class='lineno'>1</span> <span class='nv'>$node</span><span class='o'>-&gt;</span><span class='na'>title</span> <span class='o'>=</span> <span class='s2'>&quot;New Title&quot;</span><span class='p'>;</span>
-<span class='lineno'>2</span> <span class='nv'>$node</span><span class='o'>-&gt;</span><span class='na'>save</span><span class='p'>();</span> <span class='c1'>// Saves</span>
-<span class='lineno'>3</span> <span class='nv'>$node</span><span class='o'>-&gt;</span><span class='na'>delete</span><span class='p'>();</span> <span class='c1'>// Deletes</span>
+<div class='highlight'><pre><code class='php'><span class='nv'>$node</span><span class='o'>-&gt;</span><span class='na'>title</span> <span class='o'>=</span> <span class='s2'>&quot;New Title&quot;</span><span class='p'>;</span>
+<span class='nv'>$node</span><span class='o'>-&gt;</span><span class='na'>save</span><span class='p'>();</span> <span class='c1'>// Saves</span>
+<span class='nv'>$node</span><span class='o'>-&gt;</span><span class='na'>delete</span><span class='p'>();</span> <span class='c1'>// Deletes</span>
 </code></pre>
 </div>
 <p>Seriously, how nice would that be? The same could apply to Taxonomy objects:</p>
-<div class='highlight'><pre><code class='php'><span class='lineno'>1</span> <span class='nv'>$term</span> <span class='o'>=</span> <span class='nx'>TaxonomyTerm</span><span class='o'>::</span><span class='na'>load</span><span class='p'>(</span><span class='mi'>121</span><span class='p'>,</span> <span class='mi'>31</span><span class='p'>);</span> <span class='c1'>// ( $term-id, $vocab-id );</span>
-<span class='lineno'>2</span> <span class='nv'>$vocab</span> <span class='o'>=</span> <span class='nx'>TaxonomyVocabulary</span><span class='o'>::</span><span class='na'>load</span><span class='p'>(</span><span class='mi'>31</span><span class='p'>);</span>
+<div class='highlight'><pre><code class='php'><span class='nv'>$term</span> <span class='o'>=</span> <span class='nx'>TaxonomyTerm</span><span class='o'>::</span><span class='na'>load</span><span class='p'>(</span><span class='mi'>121</span><span class='p'>,</span> <span class='mi'>31</span><span class='p'>);</span> <span class='c1'>// ( $term-id, $vocab-id );</span>
+<span class='nv'>$vocab</span> <span class='o'>=</span> <span class='nx'>TaxonomyVocabulary</span><span class='o'>::</span><span class='na'>load</span><span class='p'>(</span><span class='mi'>31</span><span class='p'>);</span>
 </code></pre>
 </div>
 <p>And some lovely exceptions to handle the errors:</p>
-<div class='highlight'><pre><code class='php'><span class='lineno'> 1</span> <span class='c1'>// Examples</span>
-<span class='lineno'> 2</span> <span class='k'>try</span> <span class='p'>{</span>
-<span class='lineno'> 3</span>   <span class='nv'>$node</span> <span class='o'>=</span> <span class='nx'>Node</span><span class='o'>::</span><span class='na'>load</span><span class='p'>(</span><span class='nv'>$node_id</span><span class='p'>);</span>
-<span class='lineno'> 4</span> <span class='p'>}</span>
-<span class='lineno'> 5</span> <span class='k'>catch</span> <span class='nx'>NodeNotFoundException</span><span class='p'>(</span><span class='nv'>$e</span><span class='p'>)</span> <span class='p'>{</span>
-<span class='lineno'> 6</span> 	<span class='nx'>DrupalMessage</span><span class='o'>::</span><span class='na'>set_error</span><span class='p'>(</span><span class='s2'>&quot;Could not load the node with ID: </span><span class='si'>{</span><span class='nv'>$node_id</span><span class='si'>}</span><span class='s2'>&quot;</span><span class='p'>);</span>
-<span class='lineno'> 7</span> <span class='p'>}</span>
-<span class='lineno'> 8</span> <span class='k'>catch</span> <span class='nx'>NodeCannotBeLoadedException</span><span class='p'>(</span><span class='nv'>$e</span><span class='p'>)</span> <span class='p'>{</span>
-<span class='lineno'> 9</span>   <span class='nx'>DrupalMessage</span><span class='o'>::</span><span class='na'>set_error</span><span class='p'>(</span><span class='s2'>&quot;An unknown error occured, please contact support&quot;</span><span class='p'>);</span>
-<span class='lineno'>10</span> <span class='p'>}</span>
+<div class='highlight'><pre><code class='php'><span class='c1'>// Examples</span>
+<span class='k'>try</span> <span class='p'>{</span>
+  <span class='nv'>$node</span> <span class='o'>=</span> <span class='nx'>Node</span><span class='o'>::</span><span class='na'>load</span><span class='p'>(</span><span class='nv'>$node_id</span><span class='p'>);</span>
+<span class='p'>}</span>
+<span class='k'>catch</span> <span class='nx'>NodeNotFoundException</span><span class='p'>(</span><span class='nv'>$e</span><span class='p'>)</span> <span class='p'>{</span>
+	<span class='nx'>DrupalMessage</span><span class='o'>::</span><span class='na'>set_error</span><span class='p'>(</span><span class='s2'>&quot;Could not load the node with ID: </span><span class='si'>{</span><span class='nv'>$node_id</span><span class='si'>}</span><span class='s2'>&quot;</span><span class='p'>);</span>
+<span class='p'>}</span>
+<span class='k'>catch</span> <span class='nx'>NodeCannotBeLoadedException</span><span class='p'>(</span><span class='nv'>$e</span><span class='p'>)</span> <span class='p'>{</span>
+  <span class='nx'>DrupalMessage</span><span class='o'>::</span><span class='na'>set_error</span><span class='p'>(</span><span class='s2'>&quot;An unknown error occured, please contact support&quot;</span><span class='p'>);</span>
+<span class='p'>}</span>
 </code></pre>
 </div>
 <p>I must re-iterate that: <strong>some of this, or similar, may already be possible, but it&#8217;s not the way we&#8217;re taught to do things</strong>.</p>
@@ -206,6 +206,10 @@
 </ul>
 
 <p>But, saying that, i think the most important thing for Drupal would be to open it up to the wider development community, get it out there and people looking directly at the code, arguing on pull requests about features, removing and simplifying things, and just generally talking about it more, it&#8217;s a win-win for all of us, developers, Drupal based businesses, and users of the CMS alike.</p>
+          <div id="footer">
+            Dan Matthews, 2012. Built with <a href="http://jekyllrb.com/">Jekyll</a>.
+          </div>
       </div>
+
     </body>
 </html>

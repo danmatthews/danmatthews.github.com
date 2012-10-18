@@ -10,8 +10,7 @@ a, a:visited {
 }
 
 span.lang {
-	background:fade(#D14,80%);
-	color:white;
+	color:#D14;
 	padding:1px 2px;
 	border-radius:3px;
 	font-weight:bold;
@@ -23,11 +22,49 @@ span.lang {
 		margin:0;
 		text-align: left;
 	}
+	a, a:visited {
+		text-decoration: none;
+	}
 	width:720px;
 	margin:0 auto;
 	line-height:18px;
 	p {
 		margin:0 0 20px 0;
+	}
+	div#footer {
+		border-top:1px solid #e5e5e5;
+		padding:10px 0 45px 0;
+		margin:35px 0 0 0;
+		font-size:11px;
+		color:#aaa;
+		a,a:visited {
+			color:#aaa;
+		}
+	}
+}
+
+#wrapper {
+	overflow:hidden;
+}
+
+#projects {
+	overflow:hidden;
+	ul {
+		overflow:hidden;
+		margin:0 0 10px 0;
+		padding:0px;
+		float:left;
+		margin-right:20px;
+		li {
+			padding:0px;
+			margin:0 0 0 0;
+			list-style:none;
+			h5 {
+				margin:0 0 6px 0;
+				font-size:14px;
+				font-weight:normal;
+			}
+		}
 	}
 }
 
@@ -40,11 +77,15 @@ span.lang {
 			font-size:14px;
 			margin:0 0 6px 0;
 			overflow:hidden;
+			font-weight:bold;
 			span.date {
 				color:#666;
+				font-size:12px;
+				font-weight:normal;
 			}
 			a {
 				text-decoration: none;
+				font-weight:normal;
 			}
 		}
 	}
@@ -93,4 +134,3 @@ pre {
 		border:0;
 	}
 }
-
