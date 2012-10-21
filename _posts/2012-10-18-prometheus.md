@@ -1,6 +1,7 @@
 ---
 title: Prometheus
 layout: default
+published: false
 ---
 
 **Warning: here be spoilers.**
