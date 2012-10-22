@@ -2,6 +2,7 @@
 title: The past four years
 description: A collection of lessons learned over the past four years
 layout: default
+published: false
 tags:
   - Personal
   - Depression
