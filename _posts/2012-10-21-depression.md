@@ -7,6 +7,7 @@ tags:
   - Personal
   - Depression
   - Anxiety
+description: Highly personal post, talking about my experiences with depression & anxiety.
 ---
 
 The past four or five years have been very mixed for me, but there have definitely been a lot more downs than ups, it's all felt like a very, very slow and painful uphill struggle.

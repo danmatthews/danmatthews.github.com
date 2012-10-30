@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Let's make Drupal better
+description: I have a rant about Drupal, it's shortcomings, and what we can do to fix them.
 ---
 Before i begin this post, let me preface it with the following:
 

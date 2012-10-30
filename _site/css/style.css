@@ -45,6 +45,12 @@ span.lang {
 #maincontent div#footer a:visited {
   color: #aaa;
 }
+div#bio {
+  font-size: 21px;
+  line-height: 28px;
+  margin: 0 0 45px 0;
+  color: #444;
+}
 #wrapper {
   overflow: hidden;
 }
@@ -59,7 +65,7 @@ span.lang {
   margin-right: 20px;
 }
 #projects ul li {
-  padding: 0px;
+  padding: 0;
   margin: 0 0 0 0;
   list-style: none;
 }
@@ -69,24 +75,26 @@ span.lang {
   font-weight: normal;
 }
 #blog-posts ul {
-  margin: 15px 0;
+  margin: 15px 0 45px 0;
   padding: 0;
 }
 #blog-posts ul li {
   list-style: none;
   font-size: 14px;
-  margin: 0 0 6px 0;
+  margin: 0 0 15px 0;
   overflow: hidden;
-  font-weight: bold;
 }
 #blog-posts ul li span.date {
   color: #666;
   font-size: 12px;
-  font-weight: normal;
 }
 #blog-posts ul li a {
   text-decoration: none;
-  font-weight: normal;
+}
+#blog-posts ul li div.description {
+  font-size: 12px;
+  margin: 6px 0 0 0;
+  color: #666;
 }
 ul#nav {
   margin: 20px 0 0 0;
