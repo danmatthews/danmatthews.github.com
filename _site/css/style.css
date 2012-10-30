@@ -74,6 +74,9 @@ div#bio {
   font-size: 14px;
   font-weight: normal;
 }
+#projects ul li p {
+  color: #666;
+}
 #blog-posts ul {
   margin: 15px 0 45px 0;
   padding: 0;
