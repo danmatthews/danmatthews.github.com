@@ -1,0 +1,167 @@
+body {
+  background: white;
+  font-family: sans-serif;
+  font-size: 12px;
+  width: 960px;
+  margin: 20px auto 0 auto;
+}
+a,
+a:visited {
+  color: #D14;
+}
+span.lang {
+  color: #D14;
+  padding: 1px 2px;
+  border-radius: 3px;
+  font-weight: bold;
+}
+#maincontent {
+  margin-left: 20px;
+  padding-left: 40px;
+  float: left;
+  width: 740px;
+  line-height: 18px;
+}
+#maincontent h2.page-title {
+  padding: 20px 0;
+  margin: 0;
+  text-align: left;
+}
+#maincontent a,
+#maincontent a:visited {
+  text-decoration: none;
+}
+#maincontent p {
+  margin: 0 0 20px 0;
+}
+#maincontent div#footer {
+  border-top: 1px solid #e5e5e5;
+  padding: 10px 0 45px 0;
+  margin: 35px 0 0 0;
+  font-size: 11px;
+  color: #aaa;
+}
+#maincontent div#footer a,
+#maincontent div#footer a:visited {
+  color: #aaa;
+}
+div#bio {
+  font-size: 21px;
+  line-height: 28px;
+  margin: 0 0 45px 0;
+  color: #444;
+}
+#wrapper {
+  overflow: hidden;
+}
+#projects {
+  overflow: hidden;
+}
+#projects ul {
+  overflow: hidden;
+  margin: 0 0 10px 0;
+  padding: 0px;
+  float: left;
+  margin-right: 20px;
+}
+#projects ul li {
+  padding: 0;
+  margin: 0 0 0 0;
+  list-style: none;
+}
+#projects ul li h5 {
+  margin: 0 0 6px 0;
+  font-size: 14px;
+  font-weight: normal;
+}
+#projects ul li p {
+  color: #666;
+}
+#blog-posts ul {
+  margin: 15px 0 45px 0;
+  padding: 0;
+}
+#blog-posts ul li {
+  list-style: none;
+  font-size: 14px;
+  margin: 0 0 15px 0;
+  overflow: hidden;
+}
+#blog-posts ul li span.date {
+  color: #666;
+  font-size: 12px;
+}
+#blog-posts ul li a {
+  text-decoration: none;
+}
+#blog-posts ul li div.description {
+  font-size: 12px;
+  margin: 6px 0 0 0;
+  color: #666;
+}
+ul#nav {
+  margin: 20px 0 0 0;
+  padding: 0;
+  border-top: 1px solid #eee;
+}
+ul#nav li {
+  list-style: none;
+  border-bottom: 1px solid #eee;
+}
+ul#nav li a {
+  display: block;
+  padding: 12px 4px;
+}
+div#hero {
+  width: 120px;
+  float: left;
+  padding: 20px 20px 20px 0;
+  margin: 0 auto 35px auto;
+  overflow: hidden;
+  text-align: right;
+}
+div#hero img {
+  margin: 0 0 15px 0;
+}
+div#hero h1 {
+  font-size: 1.5em;
+  margin: 0 0 4px 0;
+  font-weight: normal;
+}
+div#hero h1 a {
+  text-decoration: none;
+}
+div#hero p#strapline {
+  color: #666;
+  font-size: 12px;
+  margin: 0 0 15px 0;
+}
+code {
+  padding: 1px 2px;
+  background: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+pre {
+  background: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 10px 0 25px 0;
+  overflow-y: scroll;
+}
+pre code {
+  background: none;
+  padding: 0px;
+  border: 0;
+}
+div.tags span {
+  color: #D14;
+  background: #f5f5f5;
+  padding: 2px 4px;
+  border-radius: 2px;
+}
+div.tags span:hover {
+  background: #444;
+  color: white;
+}
