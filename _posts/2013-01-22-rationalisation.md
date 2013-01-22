@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Rationalisation
-desciption: Just me rambling, move along.
+description: Just me rambling, move along.
 ---
 Rationalisation is a strange thing, and probably the part of the human psyche that both scares and intrigues me the most.
 
