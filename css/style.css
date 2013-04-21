@@ -1,31 +1,49 @@
 body {
   background: white;
   font-family: sans-serif;
-  font-size: 12px;
-  width: 960px;
-  margin: 20px auto 0 auto;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 16px;
+  margin: 0 0 0 0;
 }
 a,
 a:visited {
-  color: #D14;
+  color: #D9534F;
+}
+a:hover,
+a:visited:hover {
+  color: #c9302c;
+}
+ul,
+ol {
+  list-style-position: outside;
+  color: #333;
+}
+ul li,
+ol li {
+  margin: 0 0 4px 0;
 }
 span.lang {
-  color: #D14;
+  color: #D9534F;
   padding: 1px 2px;
   border-radius: 3px;
   font-weight: bold;
 }
 #maincontent {
-  margin-left: 20px;
+  margin-left: 240px;
+  margin-right: 40px;
+  padding-top: 30px;
   padding-left: 40px;
-  float: left;
-  width: 740px;
-  line-height: 18px;
 }
 #maincontent h2.page-title {
-  padding: 20px 0;
+  padding: 0 0 20px 0;
   margin: 0;
   text-align: left;
+}
+#maincontent h2,
+#maincontent h3,
+#maincontent h4,
+#maincontent h5 {
+  font-weight: normal;
 }
 #maincontent a,
 #maincontent a:visited {
@@ -33,6 +51,8 @@ span.lang {
 }
 #maincontent p {
   margin: 0 0 20px 0;
+  line-height: 1.4em;
+  color: #333333;
 }
 #maincontent div#footer {
   border-top: 1px solid #e5e5e5;
@@ -83,8 +103,8 @@ div#bio {
 }
 #blog-posts ul li {
   list-style: none;
-  font-size: 14px;
-  margin: 0 0 15px 0;
+  font-size: 16px;
+  margin: 0 0 25px 0;
   overflow: hidden;
 }
 #blog-posts ul li span.date {
@@ -95,7 +115,7 @@ div#bio {
   text-decoration: none;
 }
 #blog-posts ul li div.description {
-  font-size: 12px;
+  font-size: 16px;
   margin: 6px 0 0 0;
   color: #666;
 }
@@ -113,45 +133,54 @@ ul#nav li a {
   padding: 12px 4px;
 }
 div#hero {
-  width: 120px;
-  float: left;
-  padding: 20px 20px 20px 0;
-  margin: 0 auto 35px auto;
+  width: 220px;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  bottom: 0px;
+  padding: 30px 0px 0 20px;
+  margin: 0;
   overflow: hidden;
-  text-align: right;
+  text-align: left;
 }
 div#hero img {
   margin: 0 0 15px 0;
 }
 div#hero h1 {
-  font-size: 1.5em;
   margin: 0 0 4px 0;
   font-weight: normal;
+  font-size: 1.5em;
 }
 div#hero h1 a {
   text-decoration: none;
 }
 div#hero p#strapline {
-  color: #666;
-  font-size: 12px;
+  font-size: 14px;
   margin: 0 0 15px 0;
 }
 code {
   padding: 1px 2px;
   background: #f5f5f5;
-  border: 1px solid #ccc;
+  font-size: 0.8em;
   border-radius: 4px;
 }
-pre {
-  background: #f5f5f5;
-  border: 1px solid #ccc;
+div.highlight {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
   border-radius: 4px;
-  padding: 10px;
+  border: 1px solid #ccc;
+  background: #f5f5f5;
+  padding: 15px 15px;
   margin: 10px 0 25px 0;
   overflow-y: scroll;
 }
+pre {
+  margin: 0;
+  padding: 0;
+}
 pre code {
   background: none;
+  font-size: 14px;
   padding: 0px;
   border: 0;
 }
