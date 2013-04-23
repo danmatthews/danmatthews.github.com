@@ -41,7 +41,7 @@ Then, run `php composer.phar install` to install all the listed dependencies.
 
 The magic bit? Open up `fuel/app/boostrap.php` and change it in the following:
 
-{% highlight php startinline linenum %}
+{% highlight php startinline=true linenum %}
 
 // Load in the Autoloader
 require COREPATH.'classes'.DIRECTORY_SEPARATOR.'autoloader.php';
