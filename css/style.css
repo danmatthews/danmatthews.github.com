@@ -7,11 +7,11 @@ body {
 }
 a,
 a:visited {
-  color: #ed5a46;
+  color: #e74c3c;
 }
 a:hover,
 a:visited:hover {
-  color: #e83118;
+  color: #d62c1a;
 }
 ul,
 ol {
@@ -23,7 +23,7 @@ ol li {
   margin: 0 0 12px 0;
 }
 span.lang {
-  color: #ed5a46;
+  color: #e74c3c;
   padding: 1px 2px;
   border-radius: 3px;
   font-weight: bold;
@@ -134,8 +134,8 @@ ul#nav li a {
 div#hero {
   padding: 40px 0px 40px 0px;
   margin: 0;
-  background: #ed5a46;
-  border-bottom: 8px solid #f4988c;
+  background: #e74c3c;
+  border-bottom: 8px solid #ef8b80;
   overflow: hidden;
   text-align: left;
 }
