@@ -1,18 +1,17 @@
 body {
-  background: white;
+  background: #ffffff;
   font-family: sans-serif;
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 16px;
-  width: 760px;
   margin: 0 auto 0 auto;
 }
 a,
 a:visited {
-  color: #D9534F;
+  color: #ed5a46;
 }
 a:hover,
 a:visited:hover {
-  color: #c9302c;
+  color: #e83118;
 }
 ul,
 ol {
@@ -21,16 +20,17 @@ ol {
 }
 ul li,
 ol li {
-  margin: 0 0 4px 0;
+  margin: 0 0 12px 0;
 }
 span.lang {
-  color: #D9534F;
+  color: #ed5a46;
   padding: 1px 2px;
   border-radius: 3px;
   font-weight: bold;
 }
 #maincontent {
-  margin-right: 00px;
+  margin: 0 auto 0 auto;
+  width: 760px;
   padding-top: 30px;
 }
 #maincontent h2.page-title {
@@ -50,7 +50,7 @@ span.lang {
 }
 #maincontent p {
   margin: 0 0 20px 0;
-  line-height: 1.4em;
+  line-height: 1.6em;
   color: #333333;
 }
 #maincontent div#footer {
@@ -132,9 +132,10 @@ ul#nav li a {
   padding: 12px 4px;
 }
 div#hero {
-  padding: 30px 0px 0 0px;
+  padding: 40px 0px 40px 0px;
   margin: 0;
-  border-bottom: 1px solid #eee;
+  background: #ed5a46;
+  border-bottom: 8px solid #f4988c;
   overflow: hidden;
   text-align: left;
 }
@@ -142,16 +143,21 @@ div#hero img {
   margin: 0 0 15px 0;
 }
 div#hero h1 {
-  margin: 0 0 4px 0;
+  margin: 0 auto 4px auto;
   font-weight: normal;
+  width: 760px;
   font-size: 1.5em;
+  color: #ffffff;
 }
 div#hero h1 a {
   text-decoration: none;
+  color: #ffffff;
 }
 div#hero p#strapline {
   font-size: 14px;
-  margin: 0 0 15px 0;
+  margin: 0 auto 0 auto;
+  width: 760px;
+  color: #ffffff;
 }
 code {
   padding: 1px 2px;
@@ -188,4 +194,23 @@ div.tags span {
 div.tags span:hover {
   background: #444;
   color: white;
+}
+@media screen and (max-width: 790px) {
+  body {
+    width: auto;
+  }
+  div#hero {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  div#hero h1 {
+    width: auto;
+  }
+  div#hero p#strapline {
+    width: auto;
+  }
+  div#maincontent {
+    width: auto;
+    margin: 0px 20px;
+  }
 }

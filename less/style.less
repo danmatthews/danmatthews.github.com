@@ -1,17 +1,20 @@
 body {
-	background:white;
+	background:#ffffff;
 	// -webkit-font-smoothing:antialiased;
 	font-family:sans-serif;
 	font-family:"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-	font-size:16px;
-	width:760px;
+	font-size: 16px;
+	// width:@contentWidth;
 	margin:0 auto 0 auto;
 }
 
+@myColor: #ED5A46;
+@contentWidth: 760px;
+
 a, a:visited {
-	color:#D9534F;
+	color:@myColor;
 	&:hover {
-	color: darken(#D9534F, 10%);
+	color: darken(@myColor, 10%);
 	}
 }
 
@@ -19,19 +22,20 @@ ul, ol {
 	list-style-position: outside;
 	color:#333;
 	li {
-		margin:0 0 4px 0;
+		margin:0 0 12px 0;
 	}
 }
 
 span.lang {
-	color:#D9534F;
+	color:@myColor;
 	padding:1px 2px;
 	border-radius:3px;
 	font-weight:bold;
 }
 
 #maincontent {
-	margin-right:00px;
+	margin: 0 auto 0 auto;
+	width: @contentWidth;
 	padding-top:30px;
 	h2.page-title {
 		padding:0 0 20px 0;
@@ -47,7 +51,7 @@ span.lang {
 	// width:740px;
 	p {
 		margin:0 0 20px 0;
-		line-height:1.4em;
+		line-height:1.6em;
 		color:#333333;
 	}
 	div#footer {
@@ -137,25 +141,31 @@ ul#nav {
 }
 
 div#hero {
-	padding:30px 0px 0 0px;
+	padding:40px 0px 40px 0px;
 	margin:0;
-	border-bottom:1px solid #eee;
+	background: @myColor;
+	border-bottom: 8px solid lighten(@myColor, 15%);
 	overflow:hidden;
 	text-align: left;
 	img {
 		margin:0 0 15px 0;
 	}
 	h1 {
-		margin:0 0 4px 0;
+		margin:0 auto 4px auto;
 		font-weight:normal;
+		width: @contentWidth;
 		font-size:1.5em;
+		color:#ffffff;
 		a {
 			text-decoration: none;
+			color:#ffffff;
 		}
 	}
 	p#strapline {
 		font-size:14px;
-		margin:0 0 15px 0;
+		margin:0 auto 0 auto;
+		width: @contentWidth;
+		color:#ffffff;
 	}
 }
 
@@ -199,5 +209,27 @@ div.tags {
 			background:#444;
 			color:white;
 		}
+	}
+}
+
+@switchWidth: @contentWidth + 30;
+
+@media screen and (max-width: @switchWidth) {
+	body {
+		width: auto;
+	}
+	div#hero {
+		padding-right: 20px;
+		padding-left: 20px;
+		h1 {
+			width: auto;
+		}
+		p#strapline {
+			width: auto;
+		}
+	}
+	div#maincontent {
+		width: auto;
+		margin:0px 20px;
 	}
 }
