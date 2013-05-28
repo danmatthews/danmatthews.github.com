@@ -2,6 +2,10 @@
 title: Laravel Four
 description: Just me gushing about Laravel four
 layout: default
+tags:
+  - Laravel four
+  - PHP
+  - Frameworks
 ---
 
 Later today Taylor will be releasing Laravel version 4 onto the world.
