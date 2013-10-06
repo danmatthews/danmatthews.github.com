@@ -168,6 +168,28 @@ div#hero {
 div#comments {
 	margin-top: 60px;
 }
+/** Blog Images **/
+#maincontent {
+	div.blog-image {
+		padding: 6px;
+		border-left: 3px solid #eee;
+		padding-left: 20px;
+		width: 320px;
+		margin: 20px 0 20px;
+		a.view {
+			display: block;
+			img {
+				max-width: 320px;
+				border-radius:3px;
+			}
+		}
+		p.caption {
+			font-size: 0.8em;
+			color: #666;
+			margin: 4px 0 4px 0;
+		}
+	}
+}
 
 code {
 	padding:1px 2px;
@@ -211,7 +233,7 @@ div.tags {
 	}
 }
 
-@switchWidth: @contentWidth + 30;
+@switchWidth: (@contentWidth + 40);
 
 @media screen and (max-width: @switchWidth) {
 	body {
@@ -232,3 +254,4 @@ div.tags {
 		margin:0px 20px;
 	}
 }
+
