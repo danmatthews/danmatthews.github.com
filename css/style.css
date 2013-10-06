@@ -1,8 +1,9 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
 body {
   background: #ffffff;
   font-family: sans-serif;
-  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-size: 16px;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 18px;
   margin: 0 auto 0 auto;
 }
 a,
@@ -29,6 +30,7 @@ span.lang {
   font-weight: bold;
 }
 #maincontent {
+  -webkit-font-smoothing: antialiased;
   margin: 0 auto 0 auto;
   width: 760px;
   padding-top: 30px;
@@ -37,12 +39,6 @@ span.lang {
   padding: 0 0 20px 0;
   margin: 0;
   text-align: left;
-}
-#maincontent h2,
-#maincontent h3,
-#maincontent h4,
-#maincontent h5 {
-  font-weight: normal;
 }
 #maincontent a,
 #maincontent a:visited {
@@ -90,7 +86,6 @@ div#bio {
 }
 #projects ul li h5 {
   margin: 0 0 6px 0;
-  font-size: 16px;
   font-weight: normal;
 }
 #projects ul li p {
@@ -102,19 +97,16 @@ div#bio {
 }
 #blog-posts ul li {
   list-style: none;
-  font-size: 16px;
   margin: 0 0 25px 0;
   overflow: hidden;
 }
 #blog-posts ul li span.date {
   color: #666;
-  font-size: 12px;
 }
 #blog-posts ul li a {
   text-decoration: none;
 }
 #blog-posts ul li div.description {
-  font-size: 16px;
   margin: 6px 0 0 0;
   color: #666;
 }
@@ -134,8 +126,6 @@ ul#nav li a {
 div#hero {
   padding: 40px 0px 40px 0px;
   margin: 0;
-  background: #e74c3c;
-  border-bottom: 8px solid #ef8b80;
   overflow: hidden;
   text-align: left;
 }
@@ -144,20 +134,23 @@ div#hero img {
 }
 div#hero h1 {
   margin: 0 auto 4px auto;
-  font-weight: normal;
+  font-weight: bold;
   width: 760px;
-  font-size: 1.5em;
-  color: #ffffff;
+  font-size: 2em;
+  color: #444;
 }
 div#hero h1 a {
   text-decoration: none;
-  color: #ffffff;
+  color: #444;
 }
 div#hero p#strapline {
   font-size: 14px;
   margin: 0 auto 0 auto;
   width: 760px;
-  color: #ffffff;
+  color: #444;
+}
+div#comments {
+  margin-top: 60px;
 }
 code {
   padding: 1px 2px;
@@ -181,7 +174,6 @@ pre {
 }
 pre code {
   background: none;
-  font-size: 14px;
   padding: 0px;
   border: 0;
 }
@@ -195,7 +187,7 @@ div.tags span:hover {
   background: #444;
   color: white;
 }
-@media screen and (max-width: 790px) {
+@media screen and (max-width: 760px + 30) {
   body {
     width: auto;
   }

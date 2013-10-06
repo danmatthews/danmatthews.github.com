@@ -1,9 +1,11 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+
 body {
 	background:#ffffff;
 	// -webkit-font-smoothing:antialiased;
 	font-family:sans-serif;
-	font-family:"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-	font-size: 16px;
+	font-family:"Lato", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size: 18px;
 	// width:@contentWidth;
 	margin:0 auto 0 auto;
 }
@@ -34,6 +36,7 @@ span.lang {
 }
 
 #maincontent {
+	-webkit-font-smoothing: antialiased;
 	margin: 0 auto 0 auto;
 	width: @contentWidth;
 	padding-top:30px;
@@ -43,7 +46,6 @@ span.lang {
 		text-align: left;
 	}
 	h2,h3,h4,h5 {
-		font-weight:normal;
 	}
 	a, a:visited {
 		text-decoration: none;
@@ -91,7 +93,6 @@ div#bio {
 			list-style:none;
 			h5 {
 				margin:0 0 6px 0;
-				font-size: 16px;
 				font-weight:normal;
 			}
 			p {
@@ -107,18 +108,15 @@ div#bio {
 		padding:0;
 		li {
 			list-style:none;
-			font-size:16px;
 			margin:0 0 25px 0;
 			overflow:hidden;
 			span.date {
 				color:#666;
-				font-size:12px;
 			}
 			a {
 				text-decoration: none;
 			}
 			div.description {
-				font-size:16px;
 				margin:6px 0 0 0;
 				color:#666;
 			}
@@ -143,8 +141,6 @@ ul#nav {
 div#hero {
 	padding:40px 0px 40px 0px;
 	margin:0;
-	background: @myColor;
-	border-bottom: 8px solid lighten(@myColor, 15%);
 	overflow:hidden;
 	text-align: left;
 	img {
@@ -152,21 +148,25 @@ div#hero {
 	}
 	h1 {
 		margin:0 auto 4px auto;
-		font-weight:normal;
+		font-weight:bold;
 		width: @contentWidth;
-		font-size:1.5em;
-		color:#ffffff;
+		font-size:2em;
+		color:#444;
 		a {
 			text-decoration: none;
-			color:#ffffff;
+			color:#444;
 		}
 	}
 	p#strapline {
 		font-size:14px;
 		margin:0 auto 0 auto;
 		width: @contentWidth;
-		color:#ffffff;
+		color:#444;
 	}
+}
+
+div#comments {
+	margin-top: 60px;
 }
 
 code {
@@ -193,7 +193,6 @@ pre {
 	padding: 0;
 	code {
 		background:none;
-		font-size:14px;
 		padding:0px;
 		border:0;
 	}
