@@ -89,7 +89,7 @@ Or to create a new save-ready node, just do this:
 
 {% highlight php startinline %}
 
-$node = Node::create(array('type' => 'blog_post', 'title' => "Drupal is great"));
+$node = Node::create(['type' => 'blog_post', 'title' => "Drupal is great"]);
 {% endhighlight %}
 
 Where the result is a fully loaded `instanceof Node`, allowing you to do lovely things like:
