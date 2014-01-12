@@ -1,69 +1,34 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8">
-        <title>
-            {% if page.title %}{{ page.title }} | {% endif %} Dan Matthews - Web Developer
-        </title>
-        <meta name="author" content="Dan Matthews, Curlymoustache">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/css/pace.css" type="text/css" media="screen, projection">
-        <script type="text/javascript" src="/js/pace.js"></script>
-        <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen, projection">
-        <link rel="stylesheet" href="/css/syntax.css" type="text/css"> <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen, projection"> <!-- Homepage CSS -->
-    </head>
-    <body>
-      <div id="hero">
-        <!-- <img src="/images/me.png" /> -->
-        <h1><a href="/">Dan Matthews</a></h1>
-        <p id="strapline">Web Developer.</p></a>
+
+  {% include head.html %}
+  <body>
+
+    <header class="masthead">
+      <div class="masthead-inner">
+        <h1>{{ site.title }}</h1>
+        <p class="lead">{{ site.description }}</p>
+
+        <div class="colophon">
+          <ul class="colophon-links">
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/projects.html">Projects</a>
+            </li>
+            <li>
+              <a href="http://twitter.com/danmatthews">Twitter</a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div id="maincontent">
-        <h2 class="page-title">{{ page.title }}</h2>
-          {{ content }}
+    </header>
 
-          {% if page.tags.size > 0 %}
-          <div class="tags">
-            Tags: {% for t in page.tags %}<span>{{ t }}</span> {% endfor %}
-          </div>
-          {% endif %}
-          {% if page.comments != false %}
-          <div id="comments">
-                <div id="disqus_thread"></div>
-                  <script type="text/javascript">
-                  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-                  var disqus_shortname = 'danmatthews'; // required: replace example with your forum shortname
+    <div class="content container">
+    <h1>{{ page.title }}</h1>
+      {{ content }}
+    </div>
 
-                  /* * * DON'T EDIT BELOW THIS LINE * * */
-                  (function() {
-                  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-                  })();
-                  </script>
-                  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-                  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-          </div>
-          {% endif %}
-          <div id="footer">
-            Dan Matthews, 2013. Built with <a href="http://jekyllrb.com/">Jekyll</a>.
-          </div>
-      </div>
-      <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-      <script type="text/javascript" src="/js/view.js?auto"></script>
-      <script type="text/javascript">
-
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-27703704-1']);
-      _gaq.push(['_trackPageview']);
-
-      (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-
-      </script>
-    </body>
+  </body>
 </html>

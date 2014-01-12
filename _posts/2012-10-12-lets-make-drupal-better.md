@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: Let's make Drupal better
 description: I have a rant about Drupal, it's shortcomings, and what we can do to fix them.
 ---
@@ -77,7 +77,7 @@ PHP is (as of writing) at version 5.4 - bringing even more OOP goodness built on
 So why is drupal built and used so readily on legacy procedural code? I know there's a lot of OOP goodness in the backend, and that will improve with time, but why can't we use REAL OOP to do things like:
 
 {% highlight php startinline %}
- $node = Node::load()->where('type', 'basic_page')->get(); 
+ $node = Node::load()->where('type', 'basic_page')->get();
 {% endhighlight %}
 Or:
 

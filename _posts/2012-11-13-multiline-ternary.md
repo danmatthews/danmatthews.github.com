@@ -5,7 +5,7 @@ tags:
   - PHP
   - Ternary Operator
   - Tips
-layout: default
+layout: post
 ---
 
 We all know the virtues of the ternary operator in PHP, allowing you to set / return values based on another value without having to build a full if statement:

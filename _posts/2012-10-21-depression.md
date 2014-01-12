@@ -1,7 +1,7 @@
 ---
 title: The past four years
 description: A collection of lessons learned over the past four years
-layout: default
+layout: post
 published: false
 tags:
   - Personal
@@ -38,7 +38,7 @@ Leading on from the last paragraph - one problem i've frequently come across in 
 
 So what if i'm still there? I work with the internet, the most omnipresent piece of technology there is, literally. I mark my progress in life on my personal achievements - what i can do with the tools at my disposal, the number of new things i can learn, and applying these things in a professional manner, if you're living in a bedsit in London,
 
-One thing that i've never understood is people's *drive* to move to a place like London. I've been to london - it's nice, it really is, there's lots to do, and being the capital there's obviously more work, more places to stay, more to visit, more to see. 
+One thing that i've never understood is people's *drive* to move to a place like London. I've been to london - it's nice, it really is, there's lots to do, and being the capital there's obviously more work, more places to stay, more to visit, more to see.
 
 I get it, i really do, there's more stimulation there, and wanting 'more' out of your life is no bad thing. But places like that are outside my comfort zone - people don't help each other, people don't say hello or good morning to each other like they do up here, i love the lake district, the air, the scenery, the fact that you can walk around a lake on a saturday morning without having to plan a weekend around it and turn it into a trip away, the whole county is on our doorstep, and i really do love that.
 

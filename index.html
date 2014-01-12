@@ -6,34 +6,23 @@ comments: false
 
 <div id="bio">
 
-  <p>I'm a web developer coding in mainly <a class="lang" href="http://php.net">PHP</a>, but dabbling in languages, technologies, frameworks and tools like <a class="lang" href="http://fuelphp.com">FuelPHP</a>, <a class="lang" href="http://laravel.com">Laravel</a>, <a class="lang" href="http://jquery.com">jQuery</a>, <a class="lang" href="http://lesscss.org">LESS</a>, <a href="http://drupal.org">Drupal</a>, <a class="lang" href="http://wordpress.org">Wordpress</a> and many more. Currently, i'm a developer at <a href="http://hydrant.co.uk">Hydrant</a>, while also being the sole developer on <a href="http://simplysatisfied.net/">Simply Satisfied</a>. Checkout my projects on <a href="http://github.com/danmatthews">Github</a>, or follow me on <a href="http://twitter.com/danmatthews">Twitter</a>.</p>
+  <p>I'm a web developer coding in mainly <a class="lang" href="http://php.net">PHP</a>, but dabbling in languages, technologies, frameworks and tools like <a class="lang" href="http://fuelphp.com">FuelPHP</a>, <a class="lang" href="http://laravel.com">Laravel</a>, <a class="lang" href="http://jquery.com">jQuery</a>, <a class="lang" href="http://lesscss.org">LESS</a>, <a href="http://drupal.org">Drupal</a>, <a class="lang" href="http://wordpress.org">Wordpress</a> and many more. Currently, i'm a developer at <a href="http://hydrant.co.uk">Hydrant</a>, while also being the developer and co-founder of <a href="http://simplysatisfied.net/">Simply Satisfied</a>. Checkout my projects on <a href="http://github.com/danmatthews">Github</a>, or follow me on <a href="http://twitter.com/danmatthews">Twitter</a>.</p>
 
 </div>
 
-<div id="blog-posts">
-  <h2>Blog</h2>
-  <ul>
+<div class="posts list">
   {% for post in site.posts %}
-    <li><div><a href="{{post.url}}">{{ post.title }}</a> <span class="date">{{ post.date | date_to_string }}</span></div><div class="description">{{post.description}}</div></li>
+  <div class="post">
+    <h2>
+      <a href="{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </h2>
+    <span class="post-date">{{ post.date | date_to_string }}</span>
+  </div>
   {% endfor %}
-  </ul>
 </div>
 
-<div id="projects">
-	<h2>Projects</h2>
-	<ul>
-		<li class="first">
-			<h3><a href="http://simplysatisfied.net">Simply Satisfied</a></h3>
-			<p>Simply Satisfied is a quick way to collect customer feedback, build a survey, send email invites, and view your performance over time.</p>
-		</li>
-        <li class="second">
-            <h3><a href="http://github.com/danmatthews/HeartBeat">HeartBeat Statusboard</a></h3>
-            <p>A super-simple open-source dashboard for your office, built on the <a href="http://laravel.com">Laravel</a> framework with a little <a href="http://emberjs.com">EmberJS</a> sprinkled on top. Comes complete with responsive theme, email alerts and twitter feed.</p>
-        </li>
 
-        <li class="third">
-            <h3><a href="http://makeadrupalmodule.com">MakeADrupalModule.com</a></h3>
-            <p>I make tonnes of custom drupal modules every week, and i was tired of writing the directories, info files, and boilerplate code from scratch each time.</p>
-        </li>
-	</ul>
-</div>
+
+

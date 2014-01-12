@@ -1,6 +1,6 @@
 ---
 title: Prometheus
-layout: default
+layout: post
 published: false
 ---
 

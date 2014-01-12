@@ -1,7 +1,7 @@
 ---
 description: Why rewrite something from scratch? To improve and learn.
 title: In defense of rewriting.
-layout: default
+layout: post
 ---
 
 There's this kind of running joke about me and http://simplysatisfied.net at the moment, that as soon as i find 'a new framework' to re-write it in, i do.

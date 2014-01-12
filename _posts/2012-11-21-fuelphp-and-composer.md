@@ -6,7 +6,7 @@ tags:
   - Composer
   - Packagist
   - FuelPHP
-layout: default
+layout: post
 ---
 
 I've been using [FuelPHP](http://fuelphp.com) for a while now, and it has a really nice package system built in that makes integrating third party services really nice, up until about 2 months ago, when i needed a library that wasn't already available as a package, i would write my own, i did this for *PostmarkApp*, and now *Mandrill*, which we use at [Simply Satisfied](http://simplysatisfied.net) to deliver email.

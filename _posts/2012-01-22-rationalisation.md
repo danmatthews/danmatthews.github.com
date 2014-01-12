@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: Rationalisation
 desciption: Just me rambling, move along.
 published: false

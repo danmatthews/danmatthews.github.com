@@ -1,7 +1,7 @@
 ---
 title: Laravel Four
 description: Just me gushing about Laravel four
-layout: default
+layout: post
 tags:
   - Laravel four
   - PHP
@@ -18,4 +18,4 @@ Laravel 4 is all of the above and more. The entire core team has provided a fram
 
 All the extra great stuff is in there too - great mail handling, extremely easy queuing, great testability and abstraction, Facades so that you can switch out huge parts of the app without having to rewrite application code, it's almost too much.
 
-All this, along with a steady 6-month-release cycle, a great community and a really open-to-contributions attitude, make it the best damn PHP framework available today.  
+All this, along with a steady 6-month-release cycle, a great community and a really open-to-contributions attitude, make it the best damn PHP framework available today.

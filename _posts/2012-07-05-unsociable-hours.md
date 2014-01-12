@@ -1,6 +1,6 @@
 ---
 title: Unsociable Hours
-layout: default
+layout: post
 description: A short personal dialogue about how i struggle to adjust to office hours.
 ---
 I'm positive i'm not the only person in the web & creative industries who suffers from problems sleeping, but it's certainly becoming a recurring problem in my day-to-day working life.
