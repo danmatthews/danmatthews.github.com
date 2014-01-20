@@ -11,3 +11,7 @@ A super-simple open-source dashboard for your office, built on the <a href="http
 
 ### [MakeADrupalModule.com](http://makeadrupalmodule.com)
 I make tonnes of custom drupal modules every week, and i was tired of writing the directories, info files, and boilerplate code from scratch each time.
+
+
+### [Sanction](https://github.com/danmatthews/sanction-php)
+A PHP role and permission based access control library. Framework agnostic but works seamlessly with [Laravel 4](http://laravel.com). Define your roles and permissions as an array structure, pass to Sanction, and it'll cache them and prepare them for checking against.
