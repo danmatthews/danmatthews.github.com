@@ -29,7 +29,7 @@ npm install phantomjs
 phantomjs:
   extensions:
     Behat\MinkExtension\Extension:
-      base_url: 'http://hydrant:hydrant@snap.hydrant.co.uk'
+      base_url: 'http://mysite.co.uk'
       goutte: ~
       selenium2:
         wd_host: "http://localhost:8643/wd/hub"
