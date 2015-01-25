@@ -1,34 +1,41 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 
-  {% include head.html %}
-  <body>
+{% include head.html %}
+<body>
 
-    <header class="masthead">
-      <div class="masthead-inner">
+  <header class="masthead">
+    <div class="masthead-inner row">
+      <div class="small-6 columns">
         <h1>{{ site.title }}</h1>
         <p class="lead">{{ site.description }}</p>
+      </div>
+        <div class="bio small-6 columns">
 
-        <div class="colophon">
-          <ul class="colophon-links">
-            <li>
-              <a href="/">Home</a>
-            </li>
-            <li>
-              <a href="/projects.html">Projects</a>
-            </li>
-            <li>
-              <a href="http://twitter.com/danmatthews">Twitter</a>
-            </li>
-          </ul>
+          <p>I'm a web developer coding in mainly <a class="lang" href="http://php.net">PHP</a>, but dabbling in languages, technologies, frameworks and tools like <a class="lang" href="http://laravel.com">Laravel</a>, <a class="lang" href="http://fuelphp.com">FuelPHP</a>, <a class="lang" href="http://jquery.com">jQuery</a>, <a class="lang" href="http://sass-lang.org">SASS</a>, <a class="lang" href="http://lesscss.org">LESS</a>, <a class="lang" href="http://gruntjs.com/">Grunt</a>, <a href="http://drupal.org">Drupal</a>, <a class="lang" href="http://wordpress.org">Wordpress</a> and many more.</p>
+
+          <p>Currently, i'm a developer at <a href="http://hydrant.co.uk">Hydrant</a>, while also being the developer and co-founder of <a href="http://simplysatisfied.net/">Simply Satisfied</a>. Checkout my projects on <a href="http://github.com/danmatthews">Github</a>, or follow me on <a href="http://twitter.com/danmatthews">Twitter</a>.</p>
+
+        </div>
+      </div>
+      <div class="row nav">
+        <div class="small-12 columns">
+        <ul>
+          <li><a href="/">Blog</a></li>
+          <li><a href="/projects.html">Projects</a></li>
+          <li><a href="http://twitter.com/danmatthews">Twitter</a></li>
+          <li><a href="http://github.com/danmatthews">Github</a></li>
+        </ul>
         </div>
       </div>
     </header>
 
-    <div class="content container">
-    <h1>{{ page.title }}</h1>
-      {{ content }}
+    <div class="row">
+      <div class="columns small-12">
+        <h2 class="page-title">{{ page.title }}</h2>
+        {{ content }}
+        </div>
     </div>
-
+    <footer>Nothing to see down here i'm afraid, move along&hellip;</footer>
   </body>
-</html>
+  </html>

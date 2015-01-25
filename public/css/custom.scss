@@ -1,0 +1,167 @@
+---
+---
+
+$header-color: #19B5FE;
+
+
+body {
+	margin-bottom:5rem;
+}
+
+h2.page-title {
+	color: $header-color;
+	text-transform:uppercase;
+}
+
+.posts.list {
+	h2 {
+		text-transform: uppercase;
+		color: #95A5A6;
+	}
+}
+
+.posts.list .row {
+	padding: 40px 0;
+}
+code {
+	background: none;
+	border: 0;
+	color: #E74C3C;
+	padding: 0;
+}
+.posts.list span.post-date {
+	color: #A3B1B2;
+	font-weight: 300;
+	font-size: 0.8em;
+	text-transform: uppercase;
+}
+.posts.list .row {
+	.excerpt {
+		color: lighten(#000000, 65%);
+	}
+	h3 a {
+		color: #3498DB;
+		&:hover {
+			color: #2880B9;
+		}
+	}
+	&:nth-child(2n) h3 a {
+		color: #E74C3B;
+		&:hover {
+			color: #C0392A;
+		}
+	}
+	&:nth-child(3n) h3 a {
+		color: #9B59B6;
+		&:hover {
+			color: #8E44AD;
+		}
+	}
+}
+
+
+header {
+	background: $header-color;
+	color: #ffffff;
+	margin: 0 0 3rem 0;
+	padding: 3rem;
+
+	h1 {
+		color: #fff;
+		// text-transform: uppercase;
+		letter-spacing: -1px;
+		margin: 0;
+	}
+}
+
+.bio {
+	p {
+		font-size: 1.1rem;
+		font-weight: 300;
+	}
+	a {
+		color: lighten($header-color, 35%);
+		font-weight:500;
+		&:hover {
+			text-decoration: underline;
+			color: #fff;
+		}
+	}
+}
+
+.post {
+	.post-header {
+		margin-bottom: 3rem;
+		h2 {
+			text-transform: uppercase;
+			color: #26C281;
+		}
+		p.post-date {
+			color: #BDC3C7;
+			text-transform: uppercase;
+		}
+	}
+	.post-content {
+		margin-bottom: 6rem;
+
+		img {
+			border-radius: 2px;
+			margin: 2rem 0;
+		}
+	}
+	.related {
+		h3 {
+			text-transform: uppercase;
+			margin-bottom: 2rem;
+		}
+	}
+	pre {
+		background: #49483e;
+		padding: 20px;
+		font-size: 0.9rem;
+		border-radius:3px;
+		margin: 2rem 0;
+		box-shadow: 1px 1px 10px rgba(0,0,0,0.3);
+		code {
+			background: none;
+			padding: 0;
+			color: #fff;
+			border: 0;
+		}
+	}
+}
+
+.nav {
+	margin-top: 2rem;
+	ul {
+		list-style: none;
+		margin: 0;
+		li {
+			display: inline-block;
+			padding-right: 1rem;
+			a {
+				color: lighten($header-color, 30%);
+				text-transform: uppercase;
+				&:hover {
+					color: #fff;
+				}
+			}
+		}
+	}
+}
+
+footer {
+	text-align: center;
+	font-size: 1rem;
+	margin: 4rem 0 1rem 0;
+	color: #CBD0D3;
+	padding: 1rem 0;
+}
+
+.projects {
+	margin-top: 1.5rem;
+
+	.row {
+		padding: 1.5rem 0;
+	}
+}

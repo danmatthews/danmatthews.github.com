@@ -1,6 +1,6 @@
 ---
 title: Using Behat with PhantomJS
-layout: default
+layout: post
 ---
 
 I've searched low and high for the instructions to get PhantomJS working with my current Selenium/Firefox/Behat acceptance testing setup at work - the existing documentation is confusing (in my opinion) and led to many extra hours in the office trying to tie the two together.
@@ -19,9 +19,9 @@ PhantomJS runs using NodeJS, so you'll need to have that, and it's package manag
 
 Installing phantomjs is easy:
 
-```
-npm install phantomjs
-```
+{% highlight bash %}
+$ npm install phantomjs
+{% endhighlight %}
 
 ### Update your Behat.yml config.
 
@@ -42,13 +42,13 @@ Take note of the port (`:8643`) you set, you'll need to set this port number for
 Start GhostDriver on the port listed in your config, which for us was `8643`:
 
 ```
-phantomjs --webdriver=8643
+$ phantomjs --webdriver=8643
 ```
 
 ### Run Behat!
 
 ```
-./bin/behat -p phantomjs
+$ ./bin/behat -p phantomjs
 ```
 
 This will run your tests using the `phantomjs` profile instead of your default one, all being well, it should use Behat's Selenium2 driver, and communicate successfully with GhostDriver.

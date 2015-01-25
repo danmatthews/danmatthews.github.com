@@ -1,4 +1,4 @@
 title: Dan Matthews
 description: Web developer
 markdown: redcarpet
-highlighter: true
+highlighter: pygments
