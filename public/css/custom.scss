@@ -1,21 +1,35 @@
 ---
 ---
-
-$header-color: #19B5FE;
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700,700italic,900,400italic);
+$background-color: #2B2E48;
+$header-color: #923448;
+$headings: #E84545;
 
 
 body {
 	margin-bottom:5rem;
+	background: $background-color;
+	color: #fff;
+	font-family: 'Lato', sans-serif !important;
+}
+
+a {
+	color: $headings;
+	&:hover {
+		color: $header-color;
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: #fff;
 }
 
 h2.page-title {
-	color: $header-color;
-	text-transform:uppercase;
+	color: $headings;
 }
 
 .posts.list {
 	h2 {
-		text-transform: uppercase;
 		color: #95A5A6;
 	}
 }
@@ -30,33 +44,44 @@ code {
 	padding: 0;
 }
 .posts.list span.post-date {
-	color: #A3B1B2;
-	font-weight: 300;
+	color: lighten($background-color, 40%);
 	font-size: 0.8em;
-	text-transform: uppercase;
 }
 .posts.list .row {
+	p.post-tags {
+		margin-top: 10px;
+		font-size: 0.8em;
+		overflow: hidden;
+		span.tag {
+			background: darken($background-color, 3%);
+			padding: 4px 8px;
+			margin-right: 10px;
+			border-radius: 2px;
+			float: left;
+			display: block;
+		}
+	}
 	.excerpt {
-		color: lighten(#000000, 65%);
+		color: lighten($background-color, 40%);
 	}
 	h3 a {
-		color: #3498DB;
+		color: #fff;
 		&:hover {
-			color: #2880B9;
+			color: #fff;
 		}
 	}
-	&:nth-child(2n) h3 a {
-		color: #E74C3B;
-		&:hover {
-			color: #C0392A;
-		}
-	}
-	&:nth-child(3n) h3 a {
-		color: #9B59B6;
-		&:hover {
-			color: #8E44AD;
-		}
-	}
+	// &:nth-child(2n) h3 a {
+	// 	color: #E74C3B;
+	// 	&:hover {
+	// 		color: #C0392A;
+	// 	}
+	// }
+	// &:nth-child(3n) h3 a {
+	// 	color: #9B59B6;
+	// 	&:hover {
+	// 		color: #8E44AD;
+	// 	}
+	// }
 }
 
 
@@ -64,12 +89,10 @@ header {
 	background: $header-color;
 	color: #ffffff;
 	margin: 0 0 3rem 0;
-	padding: 3rem;
+	padding: 2rem;
 
 	h1 {
 		color: #fff;
-		// text-transform: uppercase;
-		letter-spacing: -1px;
 		line-height: 1;
 		margin: 0 0 4px 0;
 	}
@@ -94,12 +117,10 @@ header {
 	.post-header {
 		margin-bottom: 3rem;
 		h2 {
-			text-transform: uppercase;
 			color: #26C281;
 		}
 		p.post-date {
 			color: #BDC3C7;
-			text-transform: uppercase;
 		}
 	}
 	.post-content {
@@ -112,8 +133,16 @@ header {
 	}
 	.related {
 		h3 {
-			text-transform: uppercase;
 			margin-bottom: 2rem;
+			color: #fff;
+
+		}
+		div.row {
+			padding: 4px 0;
+			small {
+				color: lighten($background-color, 40%);
+				font-size: 0.8em;
+			}
 		}
 	}
 	pre {
@@ -143,7 +172,6 @@ header {
 			padding-right: 1rem;
 			a {
 				color: lighten($header-color, 30%);
-				text-transform: uppercase;
 				&:hover {
 					color: #fff;
 				}
@@ -154,7 +182,7 @@ header {
 
 footer {
 	text-align: center;
-	font-size: 1rem;
+	font-size: 0.8rem;
 	margin: 4rem 0 1rem 0;
 	color: #CBD0D3;
 	padding: 1rem 0;
@@ -164,6 +192,11 @@ footer {
 	margin-top: 1.5rem;
 
 	.row {
+		h2 {
+			a {
+				color: #fff;
+			}
+		}
 		padding: 1.5rem 0;
 	}
 }

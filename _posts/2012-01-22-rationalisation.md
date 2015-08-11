@@ -2,6 +2,7 @@
 layout: post
 title: Rationalisation
 desciption: Just me rambling, move along.
+category: personal
 published: false
 ---
 Rationalisation is a strange thing, and probably the part of the human psyche that both scares and intrigues me the most.
