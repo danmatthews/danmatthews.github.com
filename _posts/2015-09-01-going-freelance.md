@@ -1,6 +1,7 @@
 ---
 title: Going freelance
 layout: post
+published: true
 category: Work
 ---
 
